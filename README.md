@@ -1,2 +1,2 @@
 # guitar-page
-Un e-commerce relacionada a la venta de guitarras
+Un e-commerce de guitarras
