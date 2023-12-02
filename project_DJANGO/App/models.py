@@ -72,7 +72,9 @@ class SubModelo(models.Model):
 
 
 class Guitarra(models.Model):
-    modelo = models.CharField(max_length=50)
+    tipo_guitarra = models.ForeignKey(TipoGuitarra, on_delete=models.CASCADE)
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
+    modelo = models.ForeignKey(Modelo,on_delete=models.CASCADE)
     sub_modelo = models.ForeignKey(SubModelo, verbose_name=("Submodelo"), on_delete=models.CASCADE)
     precio = models.IntegerField()
     descripcion = models.CharField(max_length=200)
@@ -83,8 +85,6 @@ class Guitarra(models.Model):
     color = models.CharField(max_length=50, null=True, blank=True, help_text='Color de la guitarra')
     peso = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, help_text='Peso de la guitarra')
     imagen = models.ImageField(upload_to='guitarras', null=True, blank=True, help_text='Imagen de la guitarra')
-    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
-    tipo_guitarra = models.ForeignKey(TipoGuitarra, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.modelo
