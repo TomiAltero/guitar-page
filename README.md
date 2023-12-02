@@ -64,4 +64,26 @@ Python <numeroVersion>
     pip install pipenv
 ```
 
+<hr>
 
+**Debe crear un archivo que se llame *local_settings.py* en config**
+```python
+from .settings import *
+from .settings import DATABASES
+
+
+DATABASES['default']['PASSWORD'] = 'Ingrese su contraseña'
+
+
+#opcional, esta en el settings.py
+SECRET_KEY = 'Ingrese su secret_key' 
+
+#esta en el settings.py
+DEBUG = True
+
+#esta en el settings.py
+STATIC_URL = 'static/'
+
+```
+
+En el desarrollo de aplicaciones con Django, es común usar un archivo llamado local_settings.py. Este archivo se utiliza para manejar configuraciones específicas del entorno local o de desarrollo.En lugar de modificar directamente esas configuraciones globales cada vez que trabajas en tu computadora, puedes usar local_settings.py como una especie de "ajuste personal". Este archivo actúa como una extensión de las configuraciones principales y te permite hacer ajustes locales sin afectar la configuración que comparten todos los desarrolladores.
