@@ -1,0 +1,40 @@
+Tipos de Usuarios:
+    - Vistante anónimo
+    - Usuario Registrado
+    - Cliente
+    - Administrador
+
+Modelos | Submodelos Guitarras:
+    -Gibson:
+        -Les Paul: Standard | Custom | Studio | Junior
+        -SG: Standard
+        -Flying V: Flying V Standard
+        -ES: ES-335 | ES-175
+        -Explorer: Explorer
+    
+    -Fender:
+        -Stratocaster: American Standard | American Deluxe | American Professional | American Performer | American Ultra
+        -Telecaster: American Standard | American Deluxe | American Professional | American Performer
+        -Jazzmaster: American Professional | American Original | American Ultra | Player Series
+        -Jaguar: American Professional | American Original | American Ultra | Player Series
+    
+    -Ibanez:
+        -JEM: JEM7V | JEM77P | JEMJR
+        -SUPER Stratocaster: RG550 | RG652 | RG550XH (Extended Range) | RG470 | RG350
+        
+
+    -Epiphone:
+        -Les Paul: Les Paul Standard | Les Paul Custom | Les Paul Studio | Les Paul Junior
+        -SG: SG Standard
+        -Flying V:Flying V Standard
+        -ES: ES-339
+        -Explorer: Explorer
+        -Casino: Casino | Casino Coupe (versión más pequeña) | Gary Clark Jr. "Blak & Blu" Casino
+
+
+    -Squier:
+        -Stratocaster: Affinity Series | Contemporary Series | Classic Vibe Series | Bullet Series
+        -Telecaster: Affinity Series | Contemporary Series | Classic Vibe Series | Bullet Series
+        -Jazzmaster: Vintage Modified Series | Classic Vibe Series
+        -Jaguar: Vintage Modified Series | Classic Vibe Series
+
