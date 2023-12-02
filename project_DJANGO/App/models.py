@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Pais(models.Model):
+    abreviacion = models.CharField(max_length=5, default="MX")
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=200, default='Descripción del país')
     
     def __str__(self):
         return self.nombre
@@ -59,6 +59,8 @@ class TipoGuitarra(models.Model):
 class Modelo(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=200)
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE, default=1)
+    tipo_guitarra = models.ForeignKey(TipoGuitarra, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return self.nombre
@@ -85,8 +87,7 @@ class Guitarra(models.Model):
     numero_trastes = models.IntegerField(null=True, blank=True, help_text='Número de trastes de la guitarra')
     color = models.CharField(max_length=50, null=True, blank=True, help_text='Color de la guitarra')
     peso = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, help_text='Peso de la guitarra')
-    imagen = models.ImageField(upload_to='guitarras', null=True, blank=True, help_text='Imagen de la guitarra')
+    imagen = models.ImageField(upload_to='guitars', null=True, blank=True, help_text='Imagen de la guitarra')
     
-    def __str__(self):
-        return self.modelo
-
+    def __str__(self) -> str:
+        return f"{self.modelo.nombre} - {self.marca.nombre} - {self.tipo_guitarra.nombre}"
