@@ -66,7 +66,7 @@ Python <numeroVersion>
 
 <hr>
 
-**Debe crear un archivo que se llame *local_settings.py* en config**
+**Debe crear un archivo que se llame *local_settings.py* en config y ingresar esto:**
 ```python
 from .settings import *
 from .settings import DATABASES
