@@ -81,12 +81,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'guitar_page',
         'USER': 'root',
-        'PASSWORD': 't29092005a',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
 
 
 # Password validation
