@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
@@ -73,7 +72,7 @@ class SubModelo(models.Model):
 
 class Guitarra(models.Model):
     modelo = models.CharField(max_length=50)
-    sub_modelo = models.ForeignKey(SubModelo, verbose_name=_("Submodelo"), on_delete=models.CASCADE)
+    sub_modelo = models.ForeignKey(SubModelo, verbose_name=("Submodelo"), on_delete=models.CASCADE)
     precio = models.IntegerField()
     descripcion = models.CharField(max_length=200)
     ano_fabricacion = models.IntegerField(null=True, blank=True, help_text='Año de fabricación de la guitarra')
@@ -88,5 +87,4 @@ class Guitarra(models.Model):
     
     def __str__(self):
         return self.modelo
-    
 
