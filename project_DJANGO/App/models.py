@@ -71,7 +71,7 @@ class SubModelo(models.Model):
     modelo = models.ForeignKey(Modelo, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.nombre
+        return f"{self.nombre} - {self.modelo.nombre}"
 
 
 class Guitarra(models.Model):
