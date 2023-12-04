@@ -80,7 +80,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'guitar_page',
-        'USER': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }

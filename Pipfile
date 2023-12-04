@@ -8,6 +8,8 @@ asgiref = "==3.7.2"
 django = "==4.2.7"
 sqlparse = "==0.4.4"
 typing-extensions = "==4.8.0"
+mysqlclient = "*"
+pillow = "*"
 
 [dev-packages]
 
